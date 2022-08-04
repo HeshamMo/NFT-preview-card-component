@@ -118,6 +118,7 @@ body {
 
 .ETH-timer>p>img {
     vertical-align: bottom;
+    margin-right : 3px ; 
 }
 
 .footer {
