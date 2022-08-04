@@ -1,0 +1,155 @@
+:root {
+    --Main-BG: hsl(217, 54%, 11%);
+    --Card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --out-fit-300: 300 15px 'Outfit', sans-serif;
+    --out-fit-400: 400 15px 'Outfit', sans-serif;
+    --out-fit-600: 600 15px 'Outfit', sans-serif;
+}
+
+p {
+    color: white;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Main-BG);
+}
+
+.container {
+    border-radius: 20px;
+    background-color: var(--Card-BG);
+    width: 330px;
+    height: 550px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 20px 5px 10px hsl(217deg 54% 10%), 0 10px 10px 30px rgb(12 22 39 / 49%);
+
+
+}
+
+
+.main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+}
+
+.container>.img>img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+
+.img:hover:before {
+    opacity: 100%;
+}
+
+.img::before {
+    content: "";
+    background-color: hsla(178, 100%, 50%, 0.5);
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    top: 20px;
+    border-radius: 10px;
+    opacity: 0%;
+    cursor: pointer;
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+
+
+.container>.main>p:first-of-type {
+    color: var(--White);
+    font: var(--out-fit-600);
+    width: fit-content;
+    font-size: 22px;
+
+}
+
+.container>.main>p:first-of-type:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+
+.container>.main>p:last-of-type {
+    font: var(--out-fit-300);
+    color: var(--Soft-blue);
+}
+
+
+
+.ETH-timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+}
+
+.ETH-timer>p:first-child {
+    color: var(--Cyan);
+    font: var(--out-fit-400);
+}
+
+.ETH-timer>p:last-child {
+    color: var(--Soft-blue);
+    font: var(--out-fit-400);
+}
+
+.ETH-timer>p>img {
+    vertical-align: bottom;
+}
+
+.footer {
+    position: relative;
+}
+
+.main>.footer>p>img {
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.main>.footer>p {
+    font: var(--out-fit-300);
+    color: var(--Soft-blue);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+}
+
+.main>.footer>p>span {
+    color: var(--White);
+}
+
+.main>.footer>p>span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+@media (mix-width:375px) {}
+
+@media (mix-width:1440px) {}
